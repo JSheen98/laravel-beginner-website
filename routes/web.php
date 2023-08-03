@@ -27,6 +27,14 @@ use App\Models\Listing;
 // Get all
 Route::get('/', [ListingController::class, 'index']);
 
+// Show Create Form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+// Store Listing Data
+Route::post('/listings', [ListingController::class, 'store']);
+
+
+
 // Single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
